@@ -10,7 +10,7 @@ Firmware for vehicle control
 Clone the repo:
 
 ```
-git clone --recurse-submodules <url>
+git clone --recurse-submodules https://github.com/RoboSub-UTD/corb-firmware
 ```
 
 ## Build & test (laptop)
