@@ -13,6 +13,19 @@
       }
     },
     {
+      "name": "stm32-debug",
+      "displayName": "STM32H723 Debug (arm-none-eabi)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-cm7.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCU_BUILD_STM32": "ON",
+        "VCU_BUILD_SIM": "OFF",
+        "VCU_BUILD_TESTS": "OFF"
+      }
+    },
+    {
       "name": "host-asan",
       "displayName": "Host Debug + ASan/UBSan",
       "inherits": "host-debug",
@@ -23,7 +36,8 @@
   ],
   "buildPresets": [
     { "name": "host-debug", "configurePreset": "host-debug" },
-    { "name": "host-asan", "configurePreset": "host-asan" }
+    { "name": "host-asan", "configurePreset": "host-asan" },
+    { "name": "stm32-debug", "configurePreset": "stm32-debug" }
   ],
   "testPresets": [
     {

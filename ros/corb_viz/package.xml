@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>corb_viz</name>
+  <version>0.1.0</version>
+  <description>Host-side visualization and link monitoring for the CORB VCU running on real hardware</description>
+  <maintainer email="alecbradyjensen@gmail.com">Alec Jensen</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>corb_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>diagnostic_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>micro_ros_agent</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
