@@ -1,0 +1,40 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 22, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "host-debug",
+      "displayName": "Host Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCU_SANITIZE": "OFF"
+      }
+    },
+    {
+      "name": "host-asan",
+      "displayName": "Host Debug + ASan/UBSan",
+      "inherits": "host-debug",
+      "cacheVariables": {
+        "VCU_SANITIZE": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "host-debug", "configurePreset": "host-debug" },
+    { "name": "host-asan", "configurePreset": "host-asan" }
+  ],
+  "testPresets": [
+    {
+      "name": "host-debug",
+      "configurePreset": "host-debug",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "host-asan",
+      "configurePreset": "host-asan",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}
