@@ -1,6 +1,7 @@
 # CORB-firmware (Cube Orange Replacement Board)
 
-> [!This is still very early in development]
+> [!NOTE]
+> This is still very early in development
 
 Firmware for vehicle control
 
